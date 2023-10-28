@@ -1,0 +1,86 @@
+$controlBtnLowOpacity: 0.3;
+
+.carousel {
+  position: relative;
+
+  &.items {
+    display: flex;
+
+    .carouselContainer {
+      height: 200px;
+      margin-bottom: 0!important;
+      margin: 0 0 0 -10px;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+
+    .buttons {
+      height: 180px;
+      width: 110px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 10px 0 rgba(0,0,0,.05), 0 2px 4px 0 rgba(0,0,0,.08);
+
+      .controlBtn {
+        align-items: center;
+        border-radius: 5px;
+        display: flex;
+        height: 50%;
+        justify-content: center;
+        position: static;
+        width: 100%;
+      }
+    }
+  }
+
+  .carouselContainer {
+    height: 160px;
+    margin: 0 -10px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+
+    .carouselContent {
+      position: absolute;
+      transition: left .3s linear;
+      width: 100%;
+    }
+  }
+
+  .controlBtn {
+    position: absolute;
+    text-align: center;
+    top: 35px;
+    width: 30px;
+    opacity: $controlBtnLowOpacity;
+
+    &.prevBtn {
+      left: -53px;
+    }
+
+    &.nextBtn {
+      right: -53px;
+    }
+
+    &:disabled {
+      opacity: $controlBtnLowOpacity
+    }
+  }
+
+  &:hover {
+    .carouselContent {
+      box-shadow: 0 0 10px 0 rgba(0,0,0,.08);
+    }
+
+    .controlBtn {
+      &:not(:disabled) {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.rotate180 {
+  transform: rotate(180deg);
+}

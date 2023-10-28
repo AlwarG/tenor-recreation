@@ -1,0 +1,31 @@
+$BoxShadow: 0 2px 2px 0 rgba(0, 0, 0, .16), 0 0 1px 0 rgba(0, 0, 0, .08);
+
+.searchBarInput {
+  box-shadow: $BoxShadow;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+
+  &+.searchBtn {
+    right: -29px;
+    top: 2px;
+  }
+  & ~ .suggestions {
+    background-color: #fff;
+    box-shadow: $BoxShadow;
+    font-weight: 600;
+    position: absolute;
+    width: 100%;
+    z-index: 105;
+    
+    li {
+      padding: 10px 20px;
+
+      &:hover {
+        background-color: #eee;
+        transition: all .15s ease-in;
+      }
+    }
+  }
+}

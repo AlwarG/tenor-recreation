@@ -1,0 +1,18 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+h2 {
+  &.img-section-heading {
+    font-size: 25px;
+    font-weight: 700;
+  }
+}
+
+button {
+  &:disabled {
+    cursor: no-drop;
+  }
+}

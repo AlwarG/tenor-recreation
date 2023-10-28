@@ -1,0 +1,32 @@
+.TrendsTag {
+  display: inline-block;
+  margin: 0 10px;
+  position: relative;
+  text-decoration: none;
+  vertical-align: top;
+  width: calc(20% - 20px);
+
+  .img {
+    background-color: grey;
+    background-position: 50%;
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .05), 0 2px 4px 0 rgba(0, 0, 0, .08);
+    height: 90px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .info {
+    overflow: hidden;
+    padding-top: 5px;
+  }
+
+  .link {
+    color: #000;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

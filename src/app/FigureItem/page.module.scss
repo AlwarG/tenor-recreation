@@ -1,0 +1,38 @@
+.figure {
+  position: relative;
+  cursor: pointer;
+
+  .tags {
+    bottom: 0px;
+    display: none;
+    position: absolute;
+    margin: 0px;
+    overflow: hidden;
+    padding: 0px;
+    width: 97%;
+    height: 60px;
+
+    a {
+      display: inline-block;
+      color: #fff !important;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      max-width: 100%;
+      padding-bottom: 10px;
+      padding-left: 10px;
+      text-overflow: ellipsis;
+      text-shadow: rgb(0, 0, 0) 0px 0px 1px;
+      vertical-align: bottom;
+      overflow: hidden;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.08);
+
+    .tags {
+      display: flex;
+    }
+  }
+}

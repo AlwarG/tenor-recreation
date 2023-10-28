@@ -1,0 +1,55 @@
+.NavBar {
+  background-color: #fff;
+  border-bottom: 1px solid #ebf2f7;
+  height: 50px;
+  width: 100%;
+}
+
+.TopBarSection {
+  background-image: linear-gradient(90deg, #4cafff, #2e93e6);
+  padding: 12px;
+  height: 75px;
+  z-index: 200;
+
+  .container {
+    position: relative;
+  }
+
+  &.fixedTop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease;
+
+    .brand {
+      opacity: 1;
+    }
+    .searchContainer {
+      left: 90px;
+    }
+  }
+
+  .brand {
+    display: block;
+    height: 50px;
+    left: 0;
+    line-height: 50px;
+    opacity: 0;
+    padding-left: inherit;
+    padding-right: inherit;
+    position: absolute;
+    top: 0;
+    transition: opacity .25s ease-in-out;
+  }
+
+  .searchContainer {
+    left: 0;
+    padding-left: inherit;
+    padding-right: inherit;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: left .2s ease-in;
+  }
+}
